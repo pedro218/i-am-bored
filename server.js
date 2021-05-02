@@ -9,7 +9,7 @@ const app = express()
 // Use https instead of http
 app.use(enforce.HTTPS({ trustProtoHeader: true }))
 // Serve our file from where ever the directory it is in
-app.use('/', serveStatic(path.join(__dirname, '/dist'))
+app.use('/', serveStatic(path.join(__dirname, '/dist')))
 
 app.use(/.*/, function (req, res) {
 	res.sendFile(path.join(__dirname, '/dist/index.html'))

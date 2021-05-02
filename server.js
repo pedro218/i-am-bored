@@ -11,6 +11,10 @@ app.use(enforce.HTTPS({ trustProtoHeader: true }))
 // Serve our file from where ever the directory it is in
 app.use('/', serveStatic(path.join(__dirname, '/dist'))
 
+app.use(/.*/, function (req, res) {
+	res.sendFile(path.join(__dirname, '/dist/index.html'))
+})
+
 app.use(history())
 
 // Listen to Heroku's enviremnt varible or to port 50000

@@ -18,6 +18,11 @@
           <router-link class="navbar-item" to="/jokes">Jokes</router-link>
         </div>
       </div>
+
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://github.com/pedro218/i-am-bored">Source Code</a>
+      </div>
+      
     </nav>
     <ErrorContainer />
     <router-view />

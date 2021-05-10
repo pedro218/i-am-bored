@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const apis = {
-  bored: 'http://www.boredapi.com/api/activity/',
+  bored: 'https://www.boredapi.com/api/activity/',
   jokes: 'https://v2.jokeapi.dev/joke/',
 }
 

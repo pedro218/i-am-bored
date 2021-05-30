@@ -17,12 +17,11 @@
           <router-link class="navbar-item" to="/bored">Bored</router-link>
           <router-link class="navbar-item" to="/jokes">Jokes</router-link>
         </div>
-      </div>
 
-      <div class="navbar-end">
-        <a class="navbar-item" href="https://github.com/pedro218/i-am-bored">Source Code</a>
+        <div class="navbar-end">
+          <a class="navbar-item" href="https://github.com/pedro218/i-am-bored">Source Code</a>
+        </div>
       </div>
-      
     </nav>
     <ErrorContainer />
     <router-view />
@@ -43,6 +42,10 @@ export default {
           $('.navbar-burger').toggleClass('is-active')
           $('.navbar-menu').toggleClass('is-active')
         })
+        $('.navbar-menu').click(() => {
+          $('.navbar-burger').removeClass('is-active')
+          $('.navbar-menu').removeClass('is-active')
+        }
       })
       const main = () => router.push({name: 'Home'})
       return { main }

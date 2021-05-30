@@ -45,7 +45,7 @@ export default {
         $('.navbar-menu').click(() => {
           $('.navbar-burger').removeClass('is-active')
           $('.navbar-menu').removeClass('is-active')
-        }
+        })
       })
       const main = () => router.push({name: 'Home'})
       return { main }
